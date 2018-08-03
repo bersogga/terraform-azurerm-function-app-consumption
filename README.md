@@ -2,11 +2,11 @@
 
 ## Create a Function App in Azure
 
-This terraform module deploys a Function App on consumtion app service plan in Azure.
+This terraform module deploys a Function App on consumption app service plan in Azure.
 
 Installs following resources
 - Storage account
-- App service plan (Consumtion)
+- App service plan (Consumption)
 - Function app
 
 ## Usage
@@ -19,7 +19,7 @@ resource "azurerm_resource_group" "image_resizer" {
 }
 
 module "function_app" {
-  source                   = "innovationnorway/function-app/azurerm"
+  source                   = "innovationnorway/function-app-consumption/azurerm"
   function_app_name        = "image-resizer-func"
   resource_group_name      = "${azurerm_resource_group.image_resizer.name}"
   location                 = "${azurerm_resource_group.image_resizer.location}"
@@ -69,7 +69,7 @@ A map of tags to add to all resources. Release and Environment will be auto tagg
 The environment where the infrastructure is deployed.
 
 ### release
-The release the deploy is based on
+The release the deploy is based on.
 
 ### function_version
 The runtime version the function app should have.
