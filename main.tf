@@ -36,14 +36,14 @@ resource "azurerm_function_app" "functionapp" {
 
   tags = "${merge(var.tags, map("environment", var.environment), map("release", var.release))}"
 
-  site_config {
-    always_on = true
-  }
-
-  # MSI not yet supported on Consumption plan?
-  # identity {
-  #   type = "SystemAssigned"
+  # always on is not supported on consumtion plan
+  # site_config {
+  #   always_on = true
   # }
+
+  identity {
+    type = "SystemAssigned"
+  }
 
   app_settings = "${var.app_settings}"
 
