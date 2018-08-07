@@ -79,3 +79,9 @@ Defaults to "beta"
 
 ### identity
 The MSI identities set on the function app. Returns a list of identities.
+
+### storage_account_name
+The name of the storage account created for the function app.
+
+### storage_account_connection_string
+The primart connection string to the storage account created for the function app. 
