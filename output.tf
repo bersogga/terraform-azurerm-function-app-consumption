@@ -18,3 +18,9 @@ output "storage_account_connection_string" {
   value = "${azurerm_storage_account.funcsta.primary_connection_string}"
   sensitive = true
 }
+
+output "storage_account_primary_access_key" {
+  description = "Primary access key to the storage account created for the function app"
+  value = "${azurerm_storage_account.funcsta.primary_access_key}"
+  sensitive = true
+}
