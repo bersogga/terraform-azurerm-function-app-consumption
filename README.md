@@ -84,4 +84,7 @@ The MSI identities set on the function app. Returns a list of identities.
 The name of the storage account created for the function app.
 
 ### storage_account_connection_string
-The primart connection string to the storage account created for the function app. 
+The primary connection string to the storage account created for the function app. 
+
+### storage_account_primary_access_key
+The primary access key to the storage account created for the function app. 
